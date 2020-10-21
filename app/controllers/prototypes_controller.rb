@@ -1,5 +1,5 @@
 class PrototypesController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!,except: [:index,:edit,:show]
   before_action :set_prototype, only: [:edit, :show]
   before_action :move_to_index, only: [:edit]
 
@@ -59,3 +59,4 @@ class PrototypesController < ApplicationController
     end
   end 
 end
+
